@@ -77,7 +77,7 @@ echo $sql;
         </div>
         <div class="col s12 title">
             <div class="title_matches">
-                <h4>We found 2 potential matches</h4>
+                <h4>We found <?php echo $results->num_rows ?> potential matches</h4>
             </div>
         </div>
     </div>
