@@ -1,0 +1,123 @@
+/*  HOME PAGE */
+.title_home {
+    padding-top: 120px;
+}
+
+#title_homebottom {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+h3 {
+    font-family: Roboto;
+    color: #091133;
+}
+
+p {
+    line-height: 2;
+}
+
+.blue-button {
+    background-color: #2196F3;
+    border-radius: 2px;
+    color: #FFFFFF;
+    padding: 8px 40px;
+    font-family: Roboto;
+}
+
+.white-button {
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    border: 2px solid #091133;
+    color: #091133;
+    padding: 8px 40px;
+    font-family: Roboto;
+    margin-left: 30px;
+}
+
+form {
+    display: inline;
+}
+
+/*  TRIP PAGE */
+.title_trip {
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+
+/* Spacing for the "Airport arrival time frame" */
+
+#arrival {
+    margin-left: 100px;
+}
+
+/* Spacing for the "Pickup location", "Bag", and the map icon */
+
+.space_subtitle {
+    padding-top: 50px;
+}
+
+/* Spacing for the times on top and the informative session */
+
+.spacetop {
+    padding-top: 20px;
+}
+
+/* Only for the spacing of "Airport arrival time frame" */
+
+#arrival_time {
+    padding-bottom: 10px;
+}
+
+/* Only for the mini icons for maps and tiny info */
+
+.makein {
+    display: inline;
+}
+
+/* Only for the dropdown first choice, second choice ect. */
+
+#space_drop {
+    padding-top: 20px;
+}
+
+/* Only for the button for "Find a rideshare" */
+
+#SPACE {
+    padding-top: 100px;
+}
+
+#SPACEtwo {
+    padding-top: 30px;
+}
+
+/* Boat is the float property used on the user part */
+
+.boat {
+    float: right;
+    padding-top: 100px;
+    padding-right: 40px;
+}
+
+/* logos */
+
+.space_logo {
+    padding-top: 100px;
+}
+
+.right_writing {
+    padding-left: 20px;
+}
+
+#person {
+    padding-top: 180px;
+}
+
+/* MATCHES PAGE / TABLE */
+
+.title_matches {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.share_ride {}
