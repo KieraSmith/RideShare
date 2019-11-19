@@ -51,6 +51,8 @@ exit();
                 <h4>Tell us about your trip</h4>
             </div>
         </div>
+        <form action = "matches.php">
+            
         <div class="col s4">
             <h5>Your flight date</h5>
             <input placeholder="Select your date" type="text" class="datepicker" name="date">
@@ -72,7 +74,7 @@ exit();
                 <h7 class="makein">Arrival time is the time in which your flight's departure. Latest means you must be picked up no later than the time period.</h7>
             </div>
         </div>
-        <form action = "matches.php">
+        
         <div class="col s12">
             <h5 class="space_subtitle">Pickup location</h5>
             <div class="col s4" id="space_drop">
