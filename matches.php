@@ -51,7 +51,6 @@ if (!$results) {
     exit();
 }
 
-echo $sql;
 
 ?>
 
@@ -78,8 +77,8 @@ echo $sql;
 <div class="container">
     <div class="row">
         <div class="col s12">
-            <a href="home.html"><img src="images/Frame.png" class="space_logo"></a>
-            <a href="home.html"><img class="right_writing" src="images/Hero-Content.png"></a>
+            <a href="homepage.html"><img src="images/Frame.png" class="space_logo"></a>
+            <a href="homepage.html"><img class="right_writing" src="images/Hero-Content.png"></a>
             <i class="small material-icons makein boat">person</i>
             <h6 class="makein boat">About</h6>
             <h6 class="makein boat" id="">New Trip</h6>
