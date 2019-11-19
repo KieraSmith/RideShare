@@ -16,6 +16,15 @@ if($mysql->connect_errno) {
     echo "db connection error : " . $mysql->connect_error;
     exit();
 }
+
+echo "Departure Date: " . $_REQUEST["date"] . "<br>";
+echo "Latest arrival time: " . $_REQUEST["arrival"] . "<br>";
+echo "Latest arrival time: " . $_REQUEST["latest"] . "<br>";
+echo "1st Pickup location: " . $_REQUEST["pickup_first"] . "<br>";
+
+echo $results->num_rows . " results. <br><br>";
+
+
 ?>
 
 <?php
