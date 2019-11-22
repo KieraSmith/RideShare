@@ -122,13 +122,39 @@ form {
 
 .share_ride {}
 
-#header-home {
-    margin-bottom: 100px;
+/* SIGN IN */
+
+.logo_sign {
+    padding-top: 100px;
+    display: block;
+    margin: auto;
 }
 
+.logo_write_sign {
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+}
 
-@media only screen and (max-width: 1200px) {
-    .airplane {
-        display: none;
-    }
+.signup {
+    padding-top: 100px;
+    display: block;
+    margin: auto;
+}
+
+.findbtn {
+    background-color: #2196F3 !important;
+}
+
+/* ABOUT PAGE */
+
+.btt {
+    display: block;
+    margin: auto;
+}
+
+.profile_size {
+    width: 156px;
+    height: 150px;
+    margin: auto;
 }
