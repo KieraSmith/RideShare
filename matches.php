@@ -16,32 +16,36 @@ if($mysql->connect_errno) {
     echo "db connection error : " . $mysql->connect_error;
     exit();
 }
-
-echo "Departure Date: " . $_REQUEST["date"] . "<br>";
-echo "Latest arrival time: " . $_REQUEST["arrival"] . "<br>";
-echo "Latest arrival time: " . $_REQUEST["latest"] . "<br>";
-echo "1st Pickup location: " . $_REQUEST["pickup_first"] . "<br>";
-
-echo $results->num_rows . " results. <br><br>";
-
-
 ?>
 
 <?php
+
+$requesteddate =  $_REQUEST["date"];
+$formatteddate = DateTime::createFromFormat('M d, Y',  $requesteddate)->format('Y-m-d');
+
+$requestedtime =  $_REQUEST["latest"];
+$formattedtime = DateTime::createFromFormat('g:i a',  $requestedtime)->format('H:i:s');
+
+
+$endTime = strtotime("-30 minutes", strtotime($formattedtime));
+$formattedEndTime = date('H:i:s', $endTime);
+
+$bagTotal = $_REQUEST["bag_small"] + $_REQUEST["bag_large"];
 
 
 $sql = "SELECT * FROM departures_results WHERE 1=1 ";
 
 if ($_REQUEST['date'] != "") {
-    $sql .= "AND date = '" . $_REQUEST["date"] . "'";
+    $sql .= "AND date ='" . $formatteddate . "'";
 }
 if ($_REQUEST['latest'] != "") {
-    $sql .= "AND latest <" . "DATEADD(MINUTE, 30,'" . $_REQUEST["latest"] . ")";
-
+    $sql .= " AND time_window >='" . $formattedEndTime . "' AND time_window <='" . $formattedtime . "'" ;
 }
 if ($_REQUEST['pickup_first'] != "ALL") {
     $sql .= " AND pickup_point = '" . $_REQUEST["pickup_first"] . "'";
 }
+
+//$sql .= " AND s_bag + l_bag +" . $bagTotal . "<5";
 
 $results = $mysql->query($sql);
 
@@ -51,7 +55,7 @@ if (!$results) {
     exit();
 }
 
-
+echo "<hr>Your SQL:<br> " . $sql . "<br><br>";
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +77,6 @@ if (!$results) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
 <div class="container">
     <div class="row">
         <div class="col s12">
