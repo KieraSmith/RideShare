@@ -35,7 +35,7 @@
                     <h3>Log In</h3>
                     <div class="row">
                         <br>
-                        <form class="col s12">
+                        <form class="col s12" action="dashboard.php">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input placeholder="Traveler" id="first_name" type="text" class="validate">
